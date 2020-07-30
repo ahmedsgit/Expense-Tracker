@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+    --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    --income-color: #2ecc71;
+    --expense-color: #c0392b;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/money.jpg');
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    margin: 30 auto;
+    width: 350px;
+    border: 2px #cce6ff solid;
+    background: linear-gradient(rgba(0, 13, 26, 0.4), rgba(0, 13, 26, 0.4));
+    box-shadow: 0 10px 15px rgba(0, 13, 26, 0.4);
+    padding: 30px 50px;
+}
+
+h5 {
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+h2 {
+    margin-top: -1px;
+}
+
+h3 {
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 10px;
+    margin-top: -10px;
+}
+
+h4 {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.inc-exp-container {
+    background-color: #ededed;
+    box-shadow: var(--box-shadow);
+    color: #000d1a;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.inc-exp-container>div {
+    flex: 1;
+    text-align: center;
+}
+
+.inc-exp-container>div:first-of-type {
+    border-right: 1px solid #000d1a;
+}
+
+.money {
+    font-size: 20px;
+    letter-spacing: 5px 0;
+}
+
+.money.income {
+    color: var(--income-color);
+}
+
+.money.expense {
+    color: var(--expense-color);
+}
+
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.list li {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.list li.income {
+    border-right: 5px solid var(--income-color);
+}
+
+.list li.expense {
+    border-right: 5px solid var(--expense-color);
+}
+
+.delete-btn {
+    cursor: pointer;
+    background-color: var(--expense-color);
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    line-height: 20px;
+    padding: 10px 5px;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.list li:hover .delete-btn {
+    opacity: 1;
+}
+
+label {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+label i {
+    font-size: 14px;
+    color: #c5d32c;
+    display: block;
+    margin-bottom: -5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    width: 100%;
+    display: block;
+    font-size: 16px;
+    padding: 8px;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: #00b386;
+    color: #fff;
+    border: 0;
+    display: block;
+    margin: 30px 0;
+    padding: 10px;
+    font-size: 16px;
+    box-shadow: var(--box-shadow);
+    border-radius: 3px;
+    width: 100%;
+}
+
+
+.btn:active {
+    transform: scale(0.96);
+    transition: transform 0.4s;
+}
+
+.btn:focus,
+.delete-btn:focus {
+    outline: none;
+}
