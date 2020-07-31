@@ -42,6 +42,14 @@ h2 {
     margin-top: -1px;
 }
 
+h2.positiveBalance {
+    color: var(--income-color);
+}
+
+h2.NegativeBalance {
+    color: var(--expense-color);
+}
+
 h3 {
     border-bottom: 1px solid #bbb;
     padding-bottom: 10px;
