@@ -183,6 +183,7 @@ input[type="number"] {
 }
 
 .btn:focus,
-.delete-btn:focus {
+.delete-btn:focus,
+input {
     outline: none;
 }
